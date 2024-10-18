@@ -1,5 +1,17 @@
 // transformando o menu hamburguar em um x
-const menuHamburguer = document.querySelector('menu-hamburguer');
+const menuHamburguer = document.querySelector('.menu-hamburguer');
 menuHamburguer.addEventListener('click', () =>{
-   console.log("OK");
+   alterarMenu();
 });
+
+function alterarMenu(){
+   const nav = document.querySelector('.nav-responsive');
+   menuHamburguer.classList.toggle('change');
+
+   if (menuHamburguer.classList.contains ('change')) {
+      nav.style.display = 'block';
+      
+   }else{
+      nav.style.display = 'none';
+   }
+}
